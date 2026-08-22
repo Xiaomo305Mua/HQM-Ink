@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ 1.7.10 ]
     tags: [ '*' ]
     paths:
       - '.github/**'
