@@ -11,8 +11,8 @@
 
 - `/hqm convert <encoding>`
 
-> [!NOTE]  
-> convert 可以简写为 cv  
+> [!NOTE]
+> convert 可以简写为 cv
 > **encoding** 为编码名称（例如 `GBK`、`UTF-8`）
 
 [回到顶部](#快速导航)
