@@ -30,7 +30,7 @@ public class DataWriter {
     private int bits;
 
 
-    DataWriter() {
+    public DataWriter() {
         stream = new ByteArrayOutputStream();
     }
 
@@ -52,7 +52,12 @@ public class DataWriter {
 
     public void setUseCharset(Charset charset) {
     this.charset = charset;
-}
+    }
+
+    public byte[] getBytes() {
+    writeFinalBits();
+    return ((ByteArrayOutputStream) stream).toByteArray();
+    }
 
 
     public void writeData(int data, int bitCount) {
