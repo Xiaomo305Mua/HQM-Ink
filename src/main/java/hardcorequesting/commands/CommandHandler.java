@@ -24,6 +24,8 @@ public class CommandHandler extends CommandBase {
         register(new CommandEnable());
         register(new CommandSave());
         register(new CommandLoad());
+        register(new CommandConvert());
+        commands.put("cv", commands.get("convert"));
     }
 
     public static void register(ISubCommand command) {
