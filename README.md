@@ -1,19 +1,19 @@
 # Hardcore Questing Mode: Craft For Community
 
-[English] | [简体中文](./README_zh.md)
+English | [简体中文](./README_zh.md)
 
 <p align="center">
   <img src="resources/Logo.png" width="256">
 </p>
 
 > [!TIP]
-> [Check out the wiki for this fork](./WIKI.md)
+> [View the documentation for this fork here.](./WIKI.md)
 
-HQM adds a questing system to Minecraft that modpacks can use to guide players or reward progress.
+HQM adds a quest system to the game, which can be used to guide players or give rewards.
 
-Features include:
-- Lives: A hardcore-like system where you're out when lives run out
-- Teams, reputations, and loot bags
+It includes the following features:
+- If lives run out, you cannot respawn, similar to hardcore mode.
+- Teams, Reputation & Reward Bags
 
 ## Support
 
