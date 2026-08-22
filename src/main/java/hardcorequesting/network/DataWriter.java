@@ -16,6 +16,7 @@ import net.minecraft.tileentity.TileEntity;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.Charset;
 
 
 import static hardcorequesting.HardcoreQuesting.packetHandler;
@@ -23,6 +24,7 @@ import static hardcorequesting.HardcoreQuesting.packetHandler;
 
 public class DataWriter {
     private OutputStream stream;
+    private Charset charset = null;
     private int byteBuffer;
     private int bitCountBuffer;
     private int bits;
@@ -47,6 +49,10 @@ public class DataWriter {
     public void writeData(int data, DataBitHelper bitCount) {
         writeData(data, bitCount.getBitCount());
     }
+
+    public void setUseCharset(Charset charset) {
+    this.charset = charset;
+}
 
 
     public void writeData(int data, int bitCount) {
@@ -97,7 +103,7 @@ public class DataWriter {
 
     public void writeString(String str, DataBitHelper bits) {
         if (str != null) {
-            byte[] bytes = str.getBytes();
+            byte[] bytes = charset != null ? str.getBytes(charset) : str.getBytes();
             int l = Math.min(bytes.length, bits.getMaximum());
             writeData(l, bits);
             for (int i = 0; i < l; i++) {
