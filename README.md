@@ -7,7 +7,7 @@ English | [简体中文](./README_zh.md)
 </p>
 
 > [!TIP]
-> [View the documentation for this fork here.](./WIKI.md)
+> [Click here to view the Wiki for this fork.](./WIKI.md)
 
 HQM adds a quest system to the game, which can be used to guide players or give rewards.
 
