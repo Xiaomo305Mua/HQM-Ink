@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
@@ -11,24 +11,23 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'com.anatawa12.forge:ForgeGradle:1.2-1.1.1'
     }
 }
 
 apply plugin: 'forge'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-version = "4.4.4"
-group = "hardcorequesting" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "HQM-The Journey"
+version = modVersion
+group = modGroup
+archivesBaseName = modArchivesBaseName
 
 minecraft {
-    version = "10.13.4.1448-1.7.10"
+    version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse/assets"
 
-    //replacing stuff in code.
     replace "@VERSION@", project.version
     replaceIn "ModInformation.java"
 }
@@ -45,60 +44,37 @@ sourceSets {
     }
 }
 
-processResources
-        {
-            inputs.property "version", project.version
-            inputs.property "mcversion", project.minecraft.version
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-            // replace stuff in text files, not binary ones.
-            from(sourceSets.main.resources.srcDirs) {
-                include '**/*.info'
-                expand 'version': project.version, 'mcversion': project.minecraft.version
-            }
+    def p = { String k -> project.hasProperty(k) ? project.property(k) : "" }
+    def mcModInfoProps = [
+        'modId'           : p('modId'),
+        'modName'         : p('modName'),
+        'modDescription'  : p('modDescription'),
+        'modVersion'      : p('modVersion'),
+        'minecraftVersion': project.minecraft.version.split('-')[0],
+        'modUrl'          : p('modUrl'),
+        'authorList'      : p('authorList'),
+        'credits'         : p('credits'),
+        'logoFile'        : p('logoFile')
+    ]
 
-            // copy everything else, thats not text
-            from(sourceSets.main.resources.srcDirs) {
-                exclude '**/*.info'
-            }
-        }
-
-jar {
-    exclude "**/*.psd"
-}
-
-repositories {
-    maven { // The repo from which to get waila
-        name "Mobius Repo"
-        url "http://mobiusstrip.eu/maven"
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand mcModInfoProps
     }
-    maven { // the repo from which to get NEI and stuff
-        name 'CB Repo'
-        url "http://chickenbones.net/maven/"
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
     }
 }
 
 dependencies {
-    compile "mcp.mobius.waila:Waila:1.5.10_1.7.10"
+    compile fileTree(dir: 'libs', include: '*.jar')
 }
 
-task copyChicken(type: Copy, dependsOn: "extractUserDev") {
-    from { configurations.compile }
-    include "**/*Chicken*.jar", "**/*NotEnoughItems*.jar"
-    exclude "**/CodeChickenLib*" // because CCC downloads it anyways.. -_-
-    into file("eclipse/assets/mods") // paralell to the assets dir
-
-    mustRunAfter "deobfBinJar"
-    mustRunAfter "repackMinecraft"
+jar {
+    exclude "**/*.psd"
 }
-//tasks.setupDevWorkspace.dependsOn copyChicken
-//tasks.setupDecompWorkspace.dependsOn copyChicken
-
-def libDir = './build/libs'
-
-task deobfJar(type: Jar) {
-    description = 'Creates a jar file containing the non-obfuscated class files'
-    classifier = 'deobf'
-    destinationDir = file(libDir)
-    from sourceSets.main.output.classesDir
-}
-tasks.build.dependsOn deobfJar
