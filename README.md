@@ -2,6 +2,10 @@
 
 [English](./README.md) | [简体中文](./README_zh.md)
 
+<p align="center">
+  <img src="resources/Logo.png" width="256">
+</p>
+
 > [!TIP]
 > [Check out the wiki for this fork](./WIKI.md)
 
