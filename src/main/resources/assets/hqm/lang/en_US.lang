@@ -675,7 +675,7 @@ hqm.editType.command=commands
 # ======================================
 #			CRAFT FOR COMMUNITY
 # ======================================
-hqm.command.convert.usage=/hqm convert <charset> - Convert the quest file encoding
-hqm.command.convert.success=Saved %s encoded quest file: %s
+hqm.command.convert.usage=/hqm convert <encoding>
+hqm.command.convert.success=Saved as %s encoding: %s
 hqm.command.convert.error=Conversion failed: %s
 hqm.command.convert.unsupported=Unsupported encoding: %s
