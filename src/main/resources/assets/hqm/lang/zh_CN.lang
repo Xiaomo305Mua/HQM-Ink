@@ -347,6 +347,13 @@ hqm.command.save.info1=保存全部任务页并以对应名字命名。
 hqm.command.save.syntax2=/hqm save bags
 hqm.command.save.info2=保存全部奖励袋等级信息为JSON文件。
 
+hqm.message.hardcoreDisabled=极限模式已禁用。
+hqm.editMode.commandCreate.title=添加新指令
+hqm.editMode.commandCreate.desc=在任务领取时执行一条新指令。\n@p 会被替换为玩家名字。
+hqm.editMode.commandChange.title=修改指令
+hqm.editMode.commandChange.desc=修改已有指令。\n@p 会被替换为玩家名字。
+hqm.editType.command=指令
+
 # ======================================
 #				REWARD GUI
 # ======================================
