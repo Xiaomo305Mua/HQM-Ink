@@ -61,7 +61,7 @@ public class CommandConvert extends CommandBase {
             fos.write(bytes);
             fos.close();
 
-            sendChat(sender, "hqm.command.convert.success", outputName);
+            sendChat(sender, "hqm.command.convert.success", charsetName, outputName);
         } catch (Exception e) {
             sendChat(sender, "hqm.command.convert.error", e.getMessage());
         }
