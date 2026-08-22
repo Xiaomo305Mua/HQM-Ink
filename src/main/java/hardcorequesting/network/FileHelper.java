@@ -3,6 +3,8 @@ package hardcorequesting.network;
 
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
+import hardcorequesting.Lang;
+import hardcorequesting.Translator;
 
 import java.io.*;
 
@@ -13,26 +15,26 @@ import cpw.mods.fml.common.FMLLog;
 public abstract class FileHelper {
 
     public enum SaveResult {
-        SUCCESS("Success", "Everything was successfully saved"),
-        BACKUP_FAIL("Backup failure", "Couldn't backup the previous saved data. Please fix this and save again."),
-        SAVE_FAIL("Save failure", "Couldn't save the data to file. Your previous backup has been saved."),
-        PRE_CRASH_FAILURE("Double save failure", "Couldn't save the data to file. And when trying to backup your previously saved data, this didn't work either.");
+        SUCCESS(Lang.SAVE_SUCCESS_NAME, Lang.SAVE_SUCCESS_TEXT),
+        BACKUP_FAIL(Lang.BACKUP_FAIL_NAME, Lang.BACKUP_FAIL_TEXT),
+        SAVE_FAIL(Lang.SAVE_FAIL_NAME, Lang.SAVE_FAIL_TEXT),
+        PRE_CRASH_FAILURE(Lang.PRE_CRASH_FAILURE_NAME, Lang.PRE_CRASH_FAILURE_TEXT);
 
 
-        private String name;
-        private String text;
+        private String nameKey;
+        private String textKey;
 
-        SaveResult(String name, String text) {
-            this.name = name;
-            this.text = text;
+        SaveResult(String nameKey, String textKey) {
+            this.nameKey = nameKey;
+            this.textKey = textKey;
         }
 
         public String getName() {
-            return name;
+            return Translator.translate(nameKey);
         }
 
         public String getText() {
-            return text;
+            return Translator.translate(textKey);
         }
     }
 
