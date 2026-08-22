@@ -1,13 +1,13 @@
 # 极限任务模式：为社区而作
 
-[English](./README.md) | [简体中文]
+[English](./README.md) | 简体中文
 
 <p align="center">
   <img src="resources/Logo.png" width="256">
 </p>
 
 > [!TIP]
-> [在这里查看该分支的文档](./WIKI_zh.md)
+> [在这里查看此分支的文档](./WIKI_zh.md)
 
 ## 简介
 
