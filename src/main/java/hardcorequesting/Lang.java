@@ -27,4 +27,12 @@ public class Lang {
     public static final String CONVERT_SUCCESS = COMMAND_PREFIX + "convert.success";
     public static final String CONVERT_ERROR = COMMAND_PREFIX + "convert.error";
     public static final String CONVERT_UNSUPPORTED = COMMAND_PREFIX + "convert.unsupported";
+    public static final String SAVE_SUCCESS_NAME = COMMAND_PREFIX + "save.success.name";
+    public static final String SAVE_SUCCESS_TEXT = COMMAND_PREFIX + "save.success.text";
+    public static final String BACKUP_FAIL_NAME = COMMAND_PREFIX + "save.backupFail.name";
+    public static final String BACKUP_FAIL_TEXT = COMMAND_PREFIX + "save.backupFail.text";
+    public static final String SAVE_FAIL_NAME = COMMAND_PREFIX + "save.saveFail.name";
+    public static final String SAVE_FAIL_TEXT = COMMAND_PREFIX + "save.saveFail.text";
+    public static final String PRE_CRASH_FAILURE_NAME = COMMAND_PREFIX + "save.preCrashFail.name";
+    public static final String PRE_CRASH_FAILURE_TEXT = COMMAND_PREFIX + "save.preCrashFail.text";
 }
