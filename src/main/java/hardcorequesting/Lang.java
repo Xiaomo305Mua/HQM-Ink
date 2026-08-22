@@ -22,4 +22,9 @@ public class Lang {
 
     public static final String INFO_SUFFIX = ".info";
     public static final String SYNTAX_SUFFIX = ".syntax";
+
+    public static final String CONVERT_USAGE = COMMAND_PREFIX + "convert.usage";
+    public static final String CONVERT_SUCCESS = COMMAND_PREFIX + "convert.success";
+    public static final String CONVERT_ERROR = COMMAND_PREFIX + "convert.error";
+    public static final String CONVERT_UNSUPPORTED = COMMAND_PREFIX + "convert.unsupported";
 }
