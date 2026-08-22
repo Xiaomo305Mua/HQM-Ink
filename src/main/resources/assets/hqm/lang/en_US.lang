@@ -671,3 +671,11 @@ hqm.editType.kills=kills
 hqm.editType.repBar=rep bar
 hqm.editType.betweenSets=between sets
 hqm.editType.command=commands
+
+# ======================================
+#			CRAFT FOR COMMUNITY
+# ======================================
+hqm.command.convert.usage=/hqm convert <charset> - Convert the quest file encoding
+hqm.command.convert.success=Saved %s encoded quest file: %s
+hqm.command.convert.error=Conversion failed: %s
+hqm.command.convert.unsupported=Unsupported encoding: %s
