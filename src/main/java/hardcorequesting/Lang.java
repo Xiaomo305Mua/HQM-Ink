@@ -5,9 +5,6 @@ public class Lang {
     public static final String PREFIX = "hqm.";
 
 
-    // ======================================
-    //				COMMAND
-    // ======================================
     public static final String COMMAND_PREFIX = PREFIX + "command.";
 
     public static final String NOT_FOUND = COMMAND_PREFIX + "notFound";
