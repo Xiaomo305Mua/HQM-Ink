@@ -12,7 +12,7 @@ Use the command to convert the questbook file encoding. Upon success, a new file
 - `/hqm convert <encoding>`
 
 > [!NOTE]
-> convert can be abbreviated as cv.
+> convert can be abbreviated as cv.  
 > **encoding** is the encoding name (e.g., `GBK`, `UTF-8`).
 
 [Back to top](#quick-navigation)
