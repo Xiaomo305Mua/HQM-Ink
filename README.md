@@ -1,4 +1,26 @@
-# HQM
-Hardcore Questing Mode
+# 极限任务模式：社区共建版
 
-<This is not the readme.md you are looking for>
+> [!IMPORTANT]
+> 想知道该分支增加了什么？[点击查看文档](./WIKI.md)
+
+## 简介
+
+极限任务模式（Hardcore Questing Mode，HQM）是一个提供任务系统的 Minecraft 模组。
+整合包可以利用它来引导玩家或奖励游戏进度。
+
+HQM 拥有一些与任务系统相匹配的辅助功能：
+
+- **队伍**：支持玩家组队共享任务进度
+- **生命**：支持类极限模式的生命系统，可通过物品获得生命
+- **战利品袋**：可开启的奖励物品，其战利品表与原版略有不同
+- **声望**：支持创建可与任务奖励、任务条件配合使用的统计数值
+
+## 赞助
+
+<a href="https://www.ifdian.net/a/Ink305Mua">
+  <img src="resources/ifdian.png" width="30">
+</a>
+
+## 开源协议
+
+本项目采用 [GPL-3.0](./LICENSE) 协议开源
