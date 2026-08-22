@@ -1,6 +1,6 @@
 # Hardcore Questing Mode: Craft For Community
 
-[English](./README.md) | [简体中文](./README_zh.md)
+English | [简体中文](./README_zh.md)
 
 <p align="center">
   <img src="resources/Logo.png" width="256">
