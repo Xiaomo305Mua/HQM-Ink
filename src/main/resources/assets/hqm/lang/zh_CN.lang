@@ -669,4 +669,7 @@ hqm.editType.betweenSets=任务章节之间
 # ======================================
 #			CRAFT FOR COMMUNITY
 # ======================================
-91
+hqm.command.convert.usage=/hqm convert <编码名> - 转换任务书编码
+hqm.command.convert.success=已保存 %s 编码的任务书文件: %s
+hqm.command.convert.error=转换失败: %s
+hqm.command.convert.unsupported=不支持的编码: %s
