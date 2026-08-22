@@ -10,6 +10,7 @@ import net.minecraft.util.ChatComponentText;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.LinkedHashSet;
 
 public class CommandHelp extends CommandBase {
 
@@ -33,7 +34,7 @@ public class CommandHelp extends CommandBase {
             case 0:
                 StringBuilder output = new StringBuilder(Translator.translate(Lang.HELP_START) + " ");
                 List<String> commands = new ArrayList<>();
-                for (ISubCommand command : CommandHandler.commands.values()) {
+                for (ISubCommand command : new LinkedHashSet<ISubCommand>(CommandHandler.commands.values())) {
                     if (command.isVisible(sender)) commands.add(command.getCommandName());
                 }
 
