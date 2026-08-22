@@ -367,9 +367,9 @@ hqm.edit.cancel=取消
 hqm.deathMenu.showWorst=显示死法排名
 hqm.deathMenu.showTotal=显示总数
 hqm.deathMenu.total=总死亡次数：%s
-hqm.deathMenu.lots=lots
+hqm.deathMenu.lots=大量
 hqm.deathMenu.deaths=你已经死亡%s次。
-hqm.deathMenu.deathsOutOf=You've died %s of %s [[time||times]].
+hqm.deathMenu.deathsOutOf=你已经死亡%s次，共%s [[time||times]]。
 
 # ======================================
 #			DEATH TASK
@@ -411,8 +411,8 @@ hqm.repSetting.invalid=无效
 # ======================================
 #			  REPUTATION
 # ======================================
-hqm.rep.noValueOf=No value of
-hqm.rep.anyValueOf=Any value of
+hqm.rep.noValueOf=无价值
+hqm.rep.anyValueOf=任意值
 hqm.rep.not=否
 hqm.rep.atLeastTwo=至少要有两个称号级别
 hqm.rep.notZero=数值不能为0
@@ -425,7 +425,7 @@ hqm.rep.select=点选并显示
 # ======================================
 hqm.repKil.kills=击杀 %s/%s
 hqm.repKil.killCount=你已击杀%s名玩家。
-hqm.repKil.killCountOutOf=You've killed %s of %s [[player||players]].
+hqm.repKil.killCountOutOf=你已击杀%s名玩家，共%s [[player||players]]。
 
 # ======================================
 #			REPUTATION VALUE
@@ -520,6 +520,7 @@ hqm.questBook.completeTask=点击完成任务目标
 hqm.questBook.warning=警告！！！
 hqm.questBook.deleteOnClick=你现在点击的任何东西都将会被删除！
 hqm.questBook.goBack=返回
+hqm.questBook.backToMenu=返回菜单
 hqm.questBook.rightClick=你可以右击任何地方。
 hqm.questBook.totalQuests=合计%s个任务
 hqm.questBook.unlockedQuests=%s个任务已解锁
@@ -664,3 +665,8 @@ hqm.editType.repReward=声望奖励
 hqm.editType.kills=击杀数
 hqm.editType.repBar=声望条
 hqm.editType.betweenSets=任务章节之间
+
+# ======================================
+#			CRAFT FOR COMMUNITY
+# ======================================
+91
