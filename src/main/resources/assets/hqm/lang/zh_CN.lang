@@ -674,7 +674,7 @@ hqm.editType.repBar=声望条
 hqm.editType.betweenSets=任务章节之间
 
 # ======================================
-#			CRAFT FOR COMMUNITY
+#			INK
 # ======================================
 hqm.command.convert.usage=/hqm convert <encoding>
 hqm.command.convert.success=已保存为%s编码：%s
