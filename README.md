@@ -1,4 +1,4 @@
-# Hardcore Questing Mode: Craft For Community
+# Hardcore Questing Mode: Ink
 
 English | [简体中文](./README_zh.md)
 
