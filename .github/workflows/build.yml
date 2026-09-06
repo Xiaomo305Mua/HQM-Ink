@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: HQM-The-Journey-CFC
+          name: HQM-The-Journey-Ink
           path: build/libs/*.jar
 
       - name: Create Release
