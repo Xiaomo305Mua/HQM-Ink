@@ -1,4 +1,4 @@
-# Hardcore Questing Mode: Craft For Community Wiki
+# Hardcore Questing Mode: Ink Wiki
 
 ## Quick Navigation
 
