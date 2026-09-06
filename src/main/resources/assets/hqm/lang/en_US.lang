@@ -673,7 +673,7 @@ hqm.editType.betweenSets=between sets
 hqm.editType.command=commands
 
 # ======================================
-#			CRAFT FOR COMMUNITY
+#			INK
 # ======================================
 hqm.command.convert.usage=/hqm convert <encoding>
 hqm.command.convert.success=Saved as %s encoding: %s
