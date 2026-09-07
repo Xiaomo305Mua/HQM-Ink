@@ -262,9 +262,9 @@ public class GuiQuestBook extends GuiBase {
             public void onClick(GuiBase gui, EntityPlayer player) {
                 int i = 0;
                 for (QuestSet set : Quest.getQuestSets()) {
-                    if (set.getName().startsWith(Translator.translate("hqm.questBook.unnamedSet"))) i++;
+                    if (set.getName().startsWith("Unnamed set")) i++;
                 }
-                Quest.getQuestSets().add(new QuestSet(Translator.translate("hqm.questBook.unnamedSet") + (i == 0 ? "" : i), Translator.translate("hqm.questBook.noDescription")));
+                Quest.getQuestSets().add(new QuestSet("Unnamed set" + (i == 0 ? "" : i), "No description"));
                 SaveHelper.add(SaveHelper.EditType.SET_CREATE);
             }
         });
@@ -300,7 +300,7 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                GroupTier.getTiers().add(new GroupTier(Translator.translate("hqm.questBook.newTier"), GuiColor.BLACK, 0, 0, 0, 0, 0));
+                GroupTier.getTiers().add(new GroupTier("New Tier", GuiColor.BLACK, 0, 0, 0, 0, 0));
                 SaveHelper.add(SaveHelper.EditType.TIER_CREATE);
             }
         });
@@ -335,7 +335,7 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                new Reputation(Translator.translate("hqm.questBook.unnamed"), Translator.translate("hqm.questBook.neutral"));
+                new Reputation("Unnamed", "Neutral");
                 SaveHelper.add(SaveHelper.EditType.REPUTATION_ADD);
             }
         });
@@ -353,7 +353,7 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                selectedReputation.add(new ReputationMarker(Translator.translate("hqm.questBook.unnamed"), 0, false));
+                selectedReputation.add(new ReputationMarker("Unnamed", 0, false));
                 SaveHelper.add(SaveHelper.EditType.REPUTATION_MARKER_CREATE);
             }
         });
