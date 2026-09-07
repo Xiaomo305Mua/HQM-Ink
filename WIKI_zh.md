@@ -7,7 +7,7 @@
 <a name="convert"></a>
 ## 编码转换
 
-使用指令转换任务书编码，转换成功会生成新文件：`quests-<encoding>.hqm`
+使用命令转换任务书编码，转换成功会生成新文件：`quests.hqm-<encoding>`
 
 - `/hqm convert <encoding>`
 
