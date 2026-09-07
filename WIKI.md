@@ -16,3 +16,4 @@ Use the command to convert the questbook file encoding. Upon success, a new file
 > **encoding** is the encoding name (e.g., `GBK`, `UTF-8`).
 
 [Back to top](#quick-navigation)
+
