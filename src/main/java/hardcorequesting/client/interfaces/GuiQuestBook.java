@@ -262,9 +262,9 @@ public class GuiQuestBook extends GuiBase {
             public void onClick(GuiBase gui, EntityPlayer player) {
                 int i = 0;
                 for (QuestSet set : Quest.getQuestSets()) {
-                    if (set.getName().startsWith("Unnamed set")) i++;
+                    if (set.getName().startsWith(Translator.translate("hqm.questBook.unnamedSet"))) i++;
                 }
-                Quest.getQuestSets().add(new QuestSet("Unnamed set" + (i == 0 ? "" : i), "No description"));
+                Quest.getQuestSets().add(new QuestSet(Translator.translate("hqm.questBook.unnamedSet") + (i == 0 ? "" : i), Translator.translate("hqm.questBook.noDescription")));
                 SaveHelper.add(SaveHelper.EditType.SET_CREATE);
             }
         });
@@ -300,12 +300,12 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                GroupTier.getTiers().add(new GroupTier("New Tier", GuiColor.BLACK, 0, 0, 0, 0, 0));
+                GroupTier.getTiers().add(new GroupTier(Translator.translate("hqm.questBook.newTier"), GuiColor.BLACK, 0, 0, 0, 0, 0));
                 SaveHelper.add(SaveHelper.EditType.TIER_CREATE);
             }
         });
 
-        buttons.add(new LargeButton("Reset", 90, 190) {
+        buttons.add(new LargeButton("hqm.questBook.reset", 90, 190) {
             @Override
             public boolean isEnabled(GuiBase gui, EntityPlayer player) {
                 return GuiScreen.isCtrlKeyDown() && GuiScreen.isShiftKeyDown();
@@ -322,7 +322,7 @@ public class GuiQuestBook extends GuiBase {
             }
         });
 
-        buttons.add(new LargeButton("Create New", 180, 20) {
+        buttons.add(new LargeButton("hqm.questBook.createNew", 180, 20) {
             @Override
             public boolean isEnabled(GuiBase gui, EntityPlayer player) {
                 return Reputation.size() < DataBitHelper.REPUTATION.getMaximum();
@@ -335,7 +335,7 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                new Reputation("Unnamed", "Neutral");
+                new Reputation(Translator.translate("hqm.questBook.unnamed"), Translator.translate("hqm.questBook.neutral"));
                 SaveHelper.add(SaveHelper.EditType.REPUTATION_ADD);
             }
         });
@@ -353,7 +353,7 @@ public class GuiQuestBook extends GuiBase {
 
             @Override
             public void onClick(GuiBase gui, EntityPlayer player) {
-                selectedReputation.add(new ReputationMarker("Unnamed", 0, false));
+                selectedReputation.add(new ReputationMarker(Translator.translate("hqm.questBook.unnamed"), 0, false));
                 SaveHelper.add(SaveHelper.EditType.REPUTATION_MARKER_CREATE);
             }
         });
