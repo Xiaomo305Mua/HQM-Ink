@@ -1,15 +1,15 @@
 package hardcorequesting.commands;
 
+import hardcorequesting.Lang;
 import hardcorequesting.QuestingData;
 import hardcorequesting.Translator;
-import hardcorequesting.network.DataBitHelper;
 import hardcorequesting.network.DataWriter;
 import hardcorequesting.quests.Quest;
-import hardcorequesting.quests.QuestLine;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.nio.charset.Charset;
 
 public class CommandConvert extends CommandBase {
@@ -21,7 +21,7 @@ public class CommandConvert extends CommandBase {
     @Override
     public void handleCommand(ICommandSender sender, String[] arguments) {
         if (arguments.length < 1) {
-            sendChat(sender, "hqm.command.convert.usage");
+            sender.addChatMessage(new ChatComponentText(Translator.translate(Lang.CONVERT_USAGE)));
             return;
         }
 
@@ -30,40 +30,25 @@ public class CommandConvert extends CommandBase {
         try {
             charset = Charset.forName(charsetName);
         } catch (Exception e) {
-            sendChat(sender, "hqm.command.convert.unsupported", charsetName);
+            sender.addChatMessage(new ChatComponentText(Translator.translate(Lang.CONVERT_UNSUPPORTED, charsetName)));
             return;
         }
 
         try {
-            String path = QuestLine.getActiveQuestLine().mainPath;
-
-            String lockCode = "";
-            File lock = new File(path + "lock.txt");
-            if (lock.exists()) {
-                BufferedReader br = new BufferedReader(new FileReader(lock));
-                String line = br.readLine();
-                br.close();
-                if (line != null) {
-                    lockCode = line.substring(0, Math.min(DataBitHelper.PASS_CODE.getMaximum(), line.length()));
-                }
-            }
-
             DataWriter dw = new DataWriter();
             dw.setUseCharset(charset);
             dw.writeByte(QuestingData.FILE_VERSION.ordinal());
-            dw.writeString(lockCode, DataBitHelper.PASS_CODE);
-            Quest.saveAll(dw);
+            Quest.FILE_HELPER.write(dw);
 
             byte[] bytes = dw.getBytes();
-            String outputName = "quests-" + charsetName + ".hqm";
-            File output = new File(path + outputName);
+            File output = new File(Quest.questFile.getAbsolutePath() + "-" + charsetName);
             FileOutputStream fos = new FileOutputStream(output);
             fos.write(bytes);
             fos.close();
 
-            sendChat(sender, "hqm.command.convert.success", charsetName, outputName);
+            sender.addChatMessage(new ChatComponentText(Translator.translate(Lang.CONVERT_SUCCESS, charsetName, output.getName())));
         } catch (Exception e) {
-            sendChat(sender, "hqm.command.convert.error", e.getMessage());
+            sender.addChatMessage(new ChatComponentText(Translator.translate(Lang.CONVERT_ERROR, e.getMessage())));
         }
     }
 }
