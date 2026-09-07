@@ -675,10 +675,10 @@ hqm.editType.command=commands
 # ======================================
 #			INK
 # ======================================
-hqm.command.convert.usage=/hqm convert <encoding>
-hqm.command.convert.success=Saved as %s encoding: %s
-hqm.command.convert.error=Conversion failed: %s
-hqm.command.convert.unsupported=Unsupported encoding: %s
+hqm.command.convertUsage=/hqm convert <encoding>
+hqm.command.convertSuccess=Saved as %s encoding: %s
+hqm.command.convertError=Conversion failed: %s
+hqm.command.convertUnsupported=Unsupported encoding: %s
 hqm.saveResult.success.name=Success
 hqm.saveResult.success.text=Everything was successfully saved
 hqm.saveResult.backupFail.name=Backup failure
