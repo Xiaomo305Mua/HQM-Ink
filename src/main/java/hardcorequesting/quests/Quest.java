@@ -1768,6 +1768,7 @@ public class Quest {
     }
 
     public static FileHelper FILE_HELPER;
+    public static File questFile;
 
     public static void saveAll(DataWriter dw) {
         dw.writeString(QuestLine.getActiveQuestLine().mainDescription, DataBitHelper.QUEST_DESCRIPTION_LENGTH);
@@ -2140,9 +2141,10 @@ public class Quest {
 
 
     public static void init(final String path) {
+        questFile = new File(path + "quests.hqm");
         FILE_HELPER = new FileHelper() {
             private boolean isUnLocked = true;
-            private File file = new File(path + "quests.hqm");
+            private File file = questFile;
             private File lock = new File(path + "lock.txt");
 
             @Override
