@@ -3,7 +3,7 @@ package hardcorequesting.network;
 
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
-import hardcorequesting.client.interfaces.Translator;
+import hardcorequesting.Translator;
 
 import java.io.*;
 
