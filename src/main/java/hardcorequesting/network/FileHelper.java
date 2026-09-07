@@ -3,8 +3,7 @@ package hardcorequesting.network;
 
 import hardcorequesting.FileVersion;
 import hardcorequesting.QuestingData;
-import hardcorequesting.Lang;
-import hardcorequesting.Translator;
+import hardcorequesting.client.interfaces.Translator;
 
 import java.io.*;
 
@@ -15,26 +14,26 @@ import cpw.mods.fml.common.FMLLog;
 public abstract class FileHelper {
 
     public enum SaveResult {
-        SUCCESS(Lang.SAVE_SUCCESS_NAME, Lang.SAVE_SUCCESS_TEXT),
-        BACKUP_FAIL(Lang.BACKUP_FAIL_NAME, Lang.BACKUP_FAIL_TEXT),
-        SAVE_FAIL(Lang.SAVE_FAIL_NAME, Lang.SAVE_FAIL_TEXT),
-        PRE_CRASH_FAILURE(Lang.PRE_CRASH_FAILURE_NAME, Lang.PRE_CRASH_FAILURE_TEXT);
+        SUCCESS("hqm.saveResult.success.name", "hqm.saveResult.success.text"),
+        BACKUP_FAIL("hqm.saveResult.backupFail.name", "hqm.saveResult.backupFail.text"),
+        SAVE_FAIL("hqm.saveResult.saveFail.name", "hqm.saveResult.saveFail.text"),
+        PRE_CRASH_FAILURE("hqm.saveResult.preCrashFailure.name", "hqm.saveResult.preCrashFailure.text");
 
 
-        private String nameKey;
-        private String textKey;
+        private String name;
+        private String text;
 
-        SaveResult(String nameKey, String textKey) {
-            this.nameKey = nameKey;
-            this.textKey = textKey;
+        SaveResult(String name, String text) {
+            this.name = name;
+            this.text = text;
         }
 
         public String getName() {
-            return Translator.translate(nameKey);
+            return Translator.translate(name);
         }
 
         public String getText() {
-            return Translator.translate(textKey);
+            return Translator.translate(text);
         }
     }
 
