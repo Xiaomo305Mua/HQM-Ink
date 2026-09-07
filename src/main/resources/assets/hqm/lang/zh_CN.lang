@@ -676,10 +676,10 @@ hqm.editType.betweenSets=任务章节之间
 # ======================================
 #			INK
 # ======================================
-hqm.command.convert.usage=/hqm convert <encoding>
-hqm.command.convert.success=已保存为%s编码：%s
-hqm.command.convert.error=转换失败：%s
-hqm.command.convert.unsupported=不支持的编码：%s
+hqm.command.convertUsage=/hqm convert <encoding>
+hqm.command.convertSuccess=已保存为%s编码：%s
+hqm.command.convertError=转换失败：%s
+hqm.command.convertUnsupported=不支持的编码：%s
 hqm.saveResult.success.name=保存成功
 hqm.saveResult.success.text=所有数据已成功保存
 hqm.saveResult.backupFail.name=备份失败
