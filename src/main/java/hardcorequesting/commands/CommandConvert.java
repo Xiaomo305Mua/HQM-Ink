@@ -15,7 +15,6 @@ import java.nio.charset.Charset;
 public class CommandConvert extends CommandBase {
     public CommandConvert() {
         super("convert");
-        permissionLevel = 0;
     }
 
     @Override
