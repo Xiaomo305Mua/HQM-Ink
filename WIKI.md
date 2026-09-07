@@ -7,7 +7,7 @@
 <a name="convert"></a>
 ## Encoding Conversion
 
-Use the command to convert the questbook file encoding. Upon success, a new file will be generated: `quests-<encoding>.hqm`
+Use the command to convert the questbook file encoding. Upon success, a new file will be generated: `quests.hqm-<encoding>`
 
 - `/hqm convert <encoding>`
 
