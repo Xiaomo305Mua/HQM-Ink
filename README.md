@@ -3,7 +3,7 @@
 English | [简体中文](./README_zh.md)
 
 <p align="center">
-  <img src="resources/Logo.png" width="256">
+  <img src="resources/Logo.png" width="213" height="256">
 </p>
 
 > [!TIP]
