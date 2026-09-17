@@ -690,3 +690,6 @@ hqm.saveResult.preCrashFailure.text=Couldn't save the data to file. And when try
 hqm.questBook.reset=Reset
 hqm.questBook.createNew=Create New
 hqm.mobTask.nothing=Nothing
+hqm.editMenu.selected=Selected
+hqm.editMenu.search=Search
+hqm.editMenu.playerInventory=Player inventory
