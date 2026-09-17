@@ -119,7 +119,7 @@ public abstract class QuestTaskItems extends QuestTask {
         public String getDisplayName() {
             ItemStack item = getPermutatedItem();
             if (hasItem && item == null) {
-                return "Nothing";
+                return Translator.translate("hqm.mobTask.nothing");
             } else if (item != null) {
                 return item.getItem() != null ? item.getDisplayName() : "Unknown";
             } else {
