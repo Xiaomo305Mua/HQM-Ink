@@ -690,3 +690,4 @@ hqm.saveResult.preCrashFailure.name=双重保存失败
 hqm.saveResult.preCrashFailure.text=无法将数据保存到文件，且备份之前的存档数据时也失败了。
 hqm.questBook.reset=重置
 hqm.questBook.createNew=新建
+hqm.mobTask.nothing=无
