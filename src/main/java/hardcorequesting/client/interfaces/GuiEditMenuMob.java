@@ -81,7 +81,7 @@ public class GuiEditMenuMob extends GuiEditMenuExtended {
             mobs.clear();
             for (String rawMob : rawMobs) {
                 String localizedMob = StatCollector.translateToLocal("entity." + rawMob + ".name");
-                if (rawMob.toLowerCase().contains(search.toLowerCase())) || localizedMob.toLowerCase().contains(search.toLowerCase()) {
+                if (rawMob.toLowerCase().contains(search.toLowerCase()) || localizedMob.toLowerCase().contains(search.toLowerCase())) {
                     mobs.add(rawMob);
                 }
             }
