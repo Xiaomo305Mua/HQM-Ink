@@ -3,6 +3,7 @@ package hardcorequesting.client.interfaces;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import hardcorequesting.SaveHelper;
+import hardcorequesting.Translator;
 import hardcorequesting.items.ModItems;
 import hardcorequesting.quests.ItemPrecision;
 import hardcorequesting.quests.Quest;
@@ -280,12 +281,12 @@ public class GuiEditMenuItem extends GuiEditMenu {
     @Override
     public void draw(GuiBase gui, int mX, int mY) {
         super.draw(gui, mX, mY);
-        gui.drawString("Selected", 20, 20, 0x404040);
+        gui.drawString(Translator.translate("hqm.editMenu.selected"), 20, 20, 0x404040);
         selected.draw(gui, 70, 15, mX, mY);
-        gui.drawString("Search", 180, 20, 0x404040);
+        gui.drawString(Translator.translate("hqm.editMenu.search"), 180, 20, 0x404040);
         drawList(gui, SEARCH_X, SEARCH_Y, searchItems, mX, mY);
 
-        gui.drawString("Player inventory", 20, 70, 0x404040);
+        gui.drawString(Translator.translate("hqm.editMenu.playerInventory"), 20, 70, 0x404040);
         drawList(gui, PLAYER_X, PLAYER_Y, playerItems, mX, mY);
 
         textBoxes.draw(gui);
