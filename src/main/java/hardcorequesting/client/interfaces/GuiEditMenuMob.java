@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
 import java.util.ArrayList;
@@ -79,7 +80,8 @@ public class GuiEditMenuMob extends GuiEditMenuExtended {
         if (mobs != null) {
             mobs.clear();
             for (String rawMob : rawMobs) {
-                if (rawMob.toLowerCase().contains(search.toLowerCase())) {
+                String localizedMob = StatCollector.translateToLocal("entity." + rawMob + ".name");
+                if (rawMob.toLowerCase().contains(search.toLowerCase())) || localizedMob.toLowerCase().contains(search.toLowerCase())) {
                     mobs.add(rawMob);
                 }
             }
@@ -105,13 +107,13 @@ public class GuiEditMenuMob extends GuiEditMenuExtended {
             boolean selected = mobs.get(i).equals(mob.getMob());
             boolean inBounds = gui.inBounds(START_X, START_Y + (i - start) * OFFSET_Y, 130, 6, mX, mY);
 
-            gui.drawString(mobs.get(i), START_X, START_Y + OFFSET_Y * (i - start), 0.7F, selected ? inBounds ? 0xC0C0C0 : 0xA0A0A0 : inBounds ? 0x707070 : 0x404040);
+            gui.drawString(StatCollector.translateToLocal("entity." + mobs.get(i) + ".name"), START_X, START_Y + OFFSET_Y * (i - start), 0.7F, selected ? inBounds ? 0xC0C0C0 : 0xA0A0A0 : inBounds ? 0x707070 : 0x404040);
         }
 
         gui.drawString(Translator.translate("hqm.mobTask.search"), 180, 20, 0x404040);
         gui.drawString(Translator.translate("hqm.mobTask." + (mob.getMob() == null ? "nothing" : "currently") + "Selected"), 180, 40, 0x404040);
         if (mob.getMob() != null) {
-            gui.drawString(mob.getMob(), 180, 50, 0.7F, 0x404040);
+            gui.drawString(StatCollector.translateToLocal("entity." + mob.getMob() + ".name"), 180, 50, 0.7F, 0x404040);
         }
     }
 
