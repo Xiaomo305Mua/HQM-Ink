@@ -17,9 +17,6 @@ buildscript {
 
 apply plugin: 'forge'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 version = modVersion
 group = modGroup
 archivesBaseName = modArchivesBaseName
@@ -30,18 +27,6 @@ minecraft {
 
     replace "@VERSION@", project.version
     replaceIn "ModInformation.java"
-}
-
-def root = project.projectDir.parentFile
-sourceSets {
-    main {
-        java {
-            srcDir new File(root, "src")
-        }
-        resources {
-            srcDir new File(root, "resources")
-        }
-    }
 }
 
 processResources {
