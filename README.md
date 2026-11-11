@@ -15,12 +15,6 @@ It includes the following features:
 - If lives run out, you cannot respawn, similar to hardcore mode.
 - Teams, Reputation & Reward Bags
 
-## Support
-
-<a href="https://www.ifdian.net/a/Ink305Mua">
-  <img src="resources/ifdian.png" width="30">
-</a>
-
 ## License
 
 This project is licensed under the [GPL-3.0](./LICENSE).
