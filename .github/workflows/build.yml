@@ -8,7 +8,6 @@ on:
       - '.github/**'
       - 'build.gradle'
       - 'gradle.properties'
-      - 'settings.gradle'
       - 'src/**'
   workflow_dispatch:
 
